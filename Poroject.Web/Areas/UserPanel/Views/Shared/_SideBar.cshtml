@@ -1,0 +1,34 @@
+﻿@using Poroject.Core.Convertors
+@using Poroject.Core.RegisterViewModel
+@using Poroject.Core.Services.InterFace
+@inject IUserService _userService
+
+@{
+    SidebarUserPanelViewModel userModel = _userService.GetSaideBarUserPanelData(User.Identity.Name);
+}
+<aside>
+
+    <div class="avatar-layer">
+        <div class="img-layer">
+            <a href="" class="change-image"><i class="zmdi zmdi-edit"></i></a>
+            <img src="/UserAvatar/@userModel.ImageName">
+        </div>
+        <div class="detail">
+            <span> @userModel.UserName </span>
+            <span> تاریخ عضویت : @userModel.Registerdate.ToShamsi() </span>
+        </div>
+    </div>
+
+    <section>
+        <header><h3> میز کار </h3></header>
+        <div class="inner">
+            <ul>
+                <li><a href="/UserPanel"> مشاهده حساب کابری </a></li>
+                <li><a href="/UserPanel/EditeProfile"> ویرایش حساب کابری </a></li>
+                <li><a href="/UserPanel/CHangePassword"> تغییر رمز عبور </a></li>
+                <li><a href="/UserPanel/Wallet"> کیف پول </a></li>
+                <li><a href="/Logout"> خروج از حساب کاربری </a></li>
+            </ul>
+        </div>
+    </section>
+</aside>

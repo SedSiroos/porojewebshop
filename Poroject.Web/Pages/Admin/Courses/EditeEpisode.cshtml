@@ -1,0 +1,57 @@
+﻿@page "{id}"
+@model Poroject.Web.Pages.Admin.Courses.EditeEpisodeModel
+@{
+    ViewData["Title"] = "ویرایش قسمت";
+}
+
+
+<div class="row">
+    <form method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="courseEpisode.ID" />
+        <input type="hidden" asp-for="courseEpisode.EpisodeFileName" />
+        <input type="hidden" asp-for="courseEpisode.EpisodeId" />
+        <div class="col-md-9">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <p>ویرایش قسمت</p>
+                    </h4>
+                </div>
+            </div>
+            <hr />
+
+            <div class="form-group">
+                <label>نام قسمت </label>
+                <input type="text" asp-for="courseEpisode.EpisodeTitle" class="form-control" />
+                <span asp-validation-for="courseEpisode.EpisodeTitle"></span>
+            </div>
+            <div class="form-group">
+                <label>زمان بخش </label>
+                <input type="text" asp-for="courseEpisode.EpisodeTime" class="form-control" />
+                <span asp-validation-for="courseEpisode.EpisodeTime"></span>
+            </div>
+            <div class="form-group">
+                <label>فایل قسمت </label>
+                <input type="file" name="fileEpisode" />
+                @if (ViewData["IsExist"] != null)
+                {
+                    <p>فایل تکراری است</p>
+                }
+                <p class="text-danger">فایل اجباری است.</p>
+                <span asp-validation-for="courseEpisode.EpisodeFileName"></span>
+            </div><div class="form-group">
+                <label>نام قسمت </label>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" asp-for="courseEpisode.IsFree" />
+                        رایگان است؟
+                    </label>
+                </div>
+                <span asp-validation-for="courseEpisode.IsFree"></span>
+            </div>
+            <input type="submit" value="ذخیره اطلاعات" class="btn btn-success" />
+            <a asp-page="IndexEpisode" asp-route-id="@ViewData["IDcourse"].ToString()" class="btn btn-danger btn-sm"> برگشت</a>
+        </div>
+    </form>
+    
+</div>

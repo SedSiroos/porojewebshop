@@ -1,0 +1,76 @@
+﻿@using Poroject.Core.RegisterViewModel
+@using Poroject.Core.Convertors
+@model Poroject.Core.RegisterViewModel.ChargeWalletViewModel
+@{
+    ViewData["Title"] = "کیف پول"+User.Identity.Name;
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">تاپ لرن</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> کیف پول </li>
+        </ul>
+    </nav>
+</div>
+<main>
+    <div class="container">
+        <div class="user-account">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <partial name="_SideBar" />
+                </div>
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <div class="inner form-layer">
+                        <header><h1>شارژ کیف پول </h1></header>
+                        <hr />
+                        <form asp-action="Index" method="post">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-8 col-xs-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="username"><i class="zmdi zmdi-balance-wallet"></i></span>
+                                        <input type="number" asp-for="Amount" class="form-control" placeholder="مبلغ را وارد کنید" />
+                                    </div>
+                                </div>
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <div class="col-md-7 col-sm-8 col-xs-12">
+                                    <button class="btn btn-success"> شارز حساب </button>
+                                </div>
+                            </div>
+                        </form>
+                        <hr />
+                        @{ 
+                            List<WalletViewModel> List = ViewBag.ListWallet as List<WalletViewModel>;
+                        }
+                        <table class="table table-bordered">
+                            <tr style="background-color:forestgreen;">
+                                <th>مبلغ</th>
+                                <th>نوع تراکنش</th>
+                                <th>تاریخ</th>
+                                <th>توضیح</th>
+                            </tr>
+                            @foreach (var item in List)
+                            {
+                                <tr style="background-color:white;">
+                                    <td>@item.Amount</td>
+                                    <td>
+                                        @if (item.Type==1)
+                                        {
+                                            <p class="text-success">واریز به حساب</p>
+                                        }
+                                        else
+                                        {
+                                            <p class="text-danger">برداشت از حساب</p>
+                                        }
+                                    </td>
+                                    <td>@item.CreateDate.ToShamsi()</td>
+                                    <td>@item.Description</td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

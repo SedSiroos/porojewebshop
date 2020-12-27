@@ -1,0 +1,30 @@
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.Core.deps.json
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.Core.runtimeconfig.json
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.Core.runtimeconfig.dev.json
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.Core.dll
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.Core.pdb
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.DataLayer.dll
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.DataLayer.pdb
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.csprojAssemblyReference.cache
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.AssemblyInfoInputs.cache
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.AssemblyInfo.cs
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.csproj.CoreCompileInputs.cache
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.csproj.CopyComplete
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.dll
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.pdb
+C:\Users\Siroos\Desktop\new Asp.net\Poroject\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.genruntimeconfig.cache
+C:\Users\Siroos\Desktop\proje\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.Core.deps.json
+C:\Users\Siroos\Desktop\proje\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.Core.runtimeconfig.json
+C:\Users\Siroos\Desktop\proje\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.Core.runtimeconfig.dev.json
+C:\Users\Siroos\Desktop\proje\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.Core.dll
+C:\Users\Siroos\Desktop\proje\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.Core.pdb
+C:\Users\Siroos\Desktop\proje\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.DataLayer.dll
+C:\Users\Siroos\Desktop\proje\Poroject.Core\bin\Debug\netcoreapp3.1\Poroject.DataLayer.pdb
+C:\Users\Siroos\Desktop\proje\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.csprojAssemblyReference.cache
+C:\Users\Siroos\Desktop\proje\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.AssemblyInfoInputs.cache
+C:\Users\Siroos\Desktop\proje\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.AssemblyInfo.cs
+C:\Users\Siroos\Desktop\proje\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.csproj.CoreCompileInputs.cache
+C:\Users\Siroos\Desktop\proje\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.csproj.CopyComplete
+C:\Users\Siroos\Desktop\proje\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.dll
+C:\Users\Siroos\Desktop\proje\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.pdb
+C:\Users\Siroos\Desktop\proje\Poroject.Core\obj\Debug\netcoreapp3.1\Poroject.Core.genruntimeconfig.cache

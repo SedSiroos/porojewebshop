@@ -1,0 +1,13 @@
+﻿@model Poroject.DataLayer.Entities.User.User
+@{
+    ViewData["Title"] = "ایمیل فعال سازی";
+}
+
+<div>
+    <h2>@Model.UserName عزیز</h2>
+    <p>
+        جهت ادامه کار به حساب کاربری خود را فعال کنید
+    </p>
+    <p><a href="https://localhost:44331/Account/ActiveAccount/@Model.ActiveCode">فعالسازی</a></p>
+</div>
+

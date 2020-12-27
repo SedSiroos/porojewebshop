@@ -1,0 +1,46 @@
+﻿@page "{id}"
+@using Poroject.Core.Convertors
+@model Proje.Web.Pages.Admin.Users.DeleteUserModel
+@{
+    ViewData["Title"] = "حذف کاربر";
+}
+
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">تاپ لرن</a></li>
+        <li class="breadcrumb-item active" aria-current="page"> مشخصات کاربر </li>
+    </ul>
+</nav>
+
+<main>
+    <div class="container">
+        <div class="user-account">
+            <div class="row">
+                
+                <div class="col-lg-4">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            مشخصات کاربر
+                        </div>
+                        <div class="panel-body">
+                            <form method="post">
+                                <input type="hidden" name="UserId" value="@ViewData["UserId"].ToString()"/>
+                                <dl class="dl-horizontal">
+                                    <dt>نام کاربری: @Model.informationUserViewModel.UserName</dt>
+                                    <dd></dd>
+                                    <dt>ایمیل: @Model.informationUserViewModel.Email</dt>
+                                    <dd></dd>
+                                    <dt>تاریخ عضویت: @Model.informationUserViewModel.Registerdate.ToShamsi()</dt>
+                                    <dd></dd>
+                                    <dt>کیف پول: @Model.informationUserViewModel.Wallet</dt>
+                                    <dd></dd>
+                                </dl>
+                                <input type="submit" value="حذف" class="btn btn-danger btn-group-xs" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

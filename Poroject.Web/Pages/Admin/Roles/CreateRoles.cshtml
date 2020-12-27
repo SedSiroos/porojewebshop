@@ -1,0 +1,80 @@
+﻿@page
+@using Poroject.DataLayer.Entities.Permissons
+@model Proje.Web.Pages.Admin.Roles.CreateRolesModel
+@{
+    ViewData["Title"] = "ایجاد نقش جدید";
+    List<Permission> permissions = ViewData["permission"] as List<Permission>;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">ایجاد نقش جدید</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <form method="post" enctype="multipart/form-data">
+            <div class="col-md-8">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">افزودن نقش جدید</a>
+                    </div>
+                    <div class="container" style="margin:15px 0px">
+
+                            <div class="form-group">
+                                <input type="text" asp-for="createRolesViewModel.RoleTitle" class="form-control" placeholder="نقش کاربری جدید">
+                            </div>
+                            <p>
+                                <input type="submit" value="ذخیره نقش" class="btn btn-success" />
+                                <a asp-page="Index" class="btn btn-outline btn-info">انصراف</a>
+                            </p>
+ 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        دسترسی های نقش
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <ul>
+                                @foreach (var per in permissions.Where(p => p.ParentId == null))
+                                {
+                                    <li>
+                                        <input type="checkbox" name="SelectedPermission" value="@per.PermissionId" />  @per.PermissionTitle
+                                        @if (permissions.Any(p => p.PermissionId == per.PermissionId))
+                                        {
+                                            <ul>
+                                                @foreach (var Chaild1 in permissions.Where(p => p.ParentId == per.PermissionId))
+                                                {
+                                                    <li>
+                                                        <input type="checkbox" name="SelectedPermission" value="@Chaild1.PermissionId" />  @Chaild1.PermissionTitle
+                                                        @if (permissions.Any(p => p.PermissionId == Chaild1.PermissionId))
+                                                        {
+                                                            <ul>
+                                                                @foreach (var Chaild2 in permissions.Where(p => p.ParentId == Chaild1.PermissionId))
+                                                                {
+                                                                    <li>
+                                                                        <input type="checkbox" name="SelectedPermission" value="@Chaild2.PermissionId" />  @Chaild2.PermissionTitle
+                                                                    </li>
+                                                                }
+                                                            </ul>
+                                                        }
+                                                    </li>
+                                                }
+                                            </ul>
+                                        }
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+    </div>
+</div>

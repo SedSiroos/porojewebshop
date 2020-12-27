@@ -1,0 +1,17 @@
+﻿@model Poroject.DataLayer.Entities.User.User
+@{
+    ViewData["Title"] = "ثبت با موفقیت انجام شد.";
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">تاپ لرن</a></li>
+            <li class="breadcrumb-item active" aria-current="page">عضویت در سایت</li>
+        </ul>
+    </nav>
+<div class="alert alert-success">
+    <P>@Model.UserName عزیز خوش آمدید!</P>
+    <P>ایمیل فعال سازی  به ایمیل شما ارسال شد .</P>
+    <P>برای ادامه کار به ایمیل خود مراجعه کنید.</P>
+</div>

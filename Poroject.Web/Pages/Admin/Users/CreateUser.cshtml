@@ -1,0 +1,91 @@
+﻿@page
+@using Poroject.DataLayer.Entities.User
+@model Proje.Web.Pages.Admin.Users.CreateUserModel
+@{
+    ViewData["Title"] = "افزودن کاربرجدید";
+    List<Role> roles = ViewData["Roles"] as List<Role>;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">ایجاد کاربر جدید</h1>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <form method="post" enctype="multipart/form-data">
+            <div class="col-md-8">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">افزودن کاربر جدید</a>
+                        </h4>
+                    </div>
+                    <div class="container"style="margin:15px 0px">
+                        <div class="form-group">
+                            <input type="text" asp-for="createUserViewModel.UserName" class="form-control" placeholder="نام کاربری">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" asp-for="createUserViewModel.Email" class="form-control" placeholder="ایمیل">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" asp-for="createUserViewModel.Password" class="form-control" placeholder="کلمه عبور">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Checkboxes</label>
+                            @foreach (var item in roles)
+                            {
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="SelectedRoles" value="@item.RoleId">@item.RoleTitle
+                                    </label>
+                                </div>
+                            }
+                        </div>
+                        <p>
+                            <input type="submit" value="ذخیره اطلاعات" class="btn btn-success" />
+                        </p>
+                    </div>
+                </div>               
+            </div>
+
+            <div class="col-md-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        پروفایل کاربری
+                    </div>
+                    <div class="panel-body">
+                        <img id="imgAvatar" src="/UserAvatar/images.jpg" alt="Alternate Text" class="thumbnail" style="width:120px" />
+                        <div class="form-group">
+                            <label>انتخاب تصویر</label>
+                            <input type="file" asp-for="createUserViewModel.AvatarUser" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#imgAvatar').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]); // convert to base64 string
+            }
+        }
+
+        $("#createUserViewModel_AvatarUser").change(function () {
+            readURL(this);
+        });
+    </script>
+}

@@ -1,0 +1,42 @@
+﻿@page "{id}"
+@model Proje.Web.Pages.Admin.Roles.DeleteRoleModel
+@{
+    ViewData["Title"] = "حذف نقش";
+}
+
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">پروژه من</a></li>
+        <li class="breadcrumb-item active" aria-current="page"> مشخصات نقش </li>
+    </ul>
+</nav>
+
+<main>
+    <div class="container">
+        <div class="user-account">
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            مشخصات نقش
+                        </div>
+                        <div class="panel-body">
+                            <form method="post">
+                                <input type="hidden" asp-for="role.RoleId" />
+                                <input type="hidden" asp-for="role.RoleTitle" />
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                        <h2>  آیا از حذف نقش @Model.role.RoleTitle مطمعن هستید؟؟؟ </h2></dt>
+                                        <dd></dd>
+                                </dl>
+                                <input type="submit" value=" حذف نقش " class="btn btn-outline btn-danger" />
+                                <a asp-page="Index" class="btn btn-outline btn-info">انصراف</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
