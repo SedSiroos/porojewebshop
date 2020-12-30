@@ -51,9 +51,7 @@ namespace Poroject.DataLayer.Context
 
             modelBuilder.Entity<CourseGroup>()
                 .HasQueryFilter(g => !g.IsDelete);
-
-            modelBuilder.Entity<CourseEpisode>()
-                .HasQueryFilter(e => !e.IsDelete);
+            
 
             base.OnModelCreating(modelBuilder);
         }

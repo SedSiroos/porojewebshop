@@ -363,7 +363,6 @@ C:\Users\Siroos\Desktop\proje\Poroject.Web\obj\Debug\net5.0\Razor\Areas\UserPane
 C:\Users\Siroos\Desktop\proje\Poroject.Web\obj\Debug\net5.0\Razor\Areas\UserPanel\Views\_ViewStart.cshtml.g.cs
 C:\Users\Siroos\Desktop\proje\Poroject.Web\obj\Debug\net5.0\Razor\Pages\Admin\Courses\CreateCourse.cshtml.g.cs
 C:\Users\Siroos\Desktop\proje\Poroject.Web\obj\Debug\net5.0\Razor\Pages\Admin\Courses\CreateEpisode.cshtml.g.cs
-C:\Users\Siroos\Desktop\proje\Poroject.Web\obj\Debug\net5.0\Razor\Pages\Admin\Courses\DeleteEpisode.cshtml.g.cs
 C:\Users\Siroos\Desktop\proje\Poroject.Web\obj\Debug\net5.0\Razor\Pages\Admin\Courses\EditCourse.cshtml.g.cs
 C:\Users\Siroos\Desktop\proje\Poroject.Web\obj\Debug\net5.0\Razor\Pages\Admin\Courses\EditeEpisode.cshtml.g.cs
 C:\Users\Siroos\Desktop\proje\Poroject.Web\obj\Debug\net5.0\Razor\Pages\Admin\Courses\Index.cshtml.g.cs
@@ -406,3 +405,4 @@ C:\Users\Siroos\Desktop\proje\Poroject.Web\obj\Debug\net5.0\Poroject.Web.dll
 C:\Users\Siroos\Desktop\proje\Poroject.Web\obj\Debug\net5.0\ref\Poroject.Web.dll
 C:\Users\Siroos\Desktop\proje\Poroject.Web\obj\Debug\net5.0\Poroject.Web.pdb
 C:\Users\Siroos\Desktop\proje\Poroject.Web\obj\Debug\net5.0\Poroject.Web.genruntimeconfig.cache
+C:\Users\Siroos\Desktop\proje\Poroject.Web\obj\Debug\net5.0\Razor\Views\Course\ShowCourse.cshtml.g.cs

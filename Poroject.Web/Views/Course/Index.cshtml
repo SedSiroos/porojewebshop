@@ -19,14 +19,16 @@
         <input type="hidden" id="pageid" name="pageId" value="@ViewBag.pageId.ToString()" />
         <section class="term-categories">
             <div class="top-bar">
-                <header><h1> دوره های <span> برنامه نویسی وب </span> </h1> <span> @Model.Item1.Count().ToString() دوره </span></header>
+                <header><h1> دوره های <span> برنامه نویسی وب </span> </h1> <span> @Model.Item1.Count().ToString() دوره </span></header>                
                 <div class="row">
                     <div class="col-md-4 col-sm-12 col-xs-12 pull-right">
                         <div class="input">
                             <input type="text" name="filter" placeholder="موضوع مورد نظر ...">
                             <button><i class="zmdi zmdi-search"></i></button>
-                        </div>
+                            <a href="/Course" class="btn btn-sm btn-danger">رفرش</a>
+                        </div>                        
                     </div>
+
                     <div class="col-md-4 col-sm-6 col-xs-12 pull-right">
                         <div class="switch-field available">
                             <input id="available-filter-1" name="getType" value="all" checked="" type="radio" onchange="changeGroup()">
@@ -126,6 +128,7 @@
         </section>
     </form>
 </div>
+
 @section Scripts{
     <script src="/noUiSlider/nouislider.min.js"></script>
     <script src="/js/script.js"></script>
@@ -139,7 +142,7 @@
         $(function () {
             var slider = document.getElementById('priceFilter');
             noUiSlider.create(slider, {
-                start: [20000, 900000],
+                start: [900000, 20000],
                 step: 5000,
                 connect: true,
                 direction: 'rtl',
