@@ -15,10 +15,10 @@ C:\Users\Siroos\Desktop\proje\Poroject.DataLayer\bin\Debug\netcoreapp3.1\Porojec
 C:\Users\Siroos\Desktop\proje\Poroject.DataLayer\bin\Debug\netcoreapp3.1\Poroject.DataLayer.runtimeconfig.dev.json
 C:\Users\Siroos\Desktop\proje\Poroject.DataLayer\bin\Debug\netcoreapp3.1\Poroject.DataLayer.dll
 C:\Users\Siroos\Desktop\proje\Poroject.DataLayer\bin\Debug\netcoreapp3.1\Poroject.DataLayer.pdb
-C:\Users\Siroos\Desktop\proje\Poroject.DataLayer\obj\Debug\netcoreapp3.1\Poroject.DataLayer.csprojAssemblyReference.cache
 C:\Users\Siroos\Desktop\proje\Poroject.DataLayer\obj\Debug\netcoreapp3.1\Poroject.DataLayer.AssemblyInfoInputs.cache
 C:\Users\Siroos\Desktop\proje\Poroject.DataLayer\obj\Debug\netcoreapp3.1\Poroject.DataLayer.AssemblyInfo.cs
 C:\Users\Siroos\Desktop\proje\Poroject.DataLayer\obj\Debug\netcoreapp3.1\Poroject.DataLayer.csproj.CoreCompileInputs.cache
 C:\Users\Siroos\Desktop\proje\Poroject.DataLayer\obj\Debug\netcoreapp3.1\Poroject.DataLayer.dll
 C:\Users\Siroos\Desktop\proje\Poroject.DataLayer\obj\Debug\netcoreapp3.1\Poroject.DataLayer.pdb
 C:\Users\Siroos\Desktop\proje\Poroject.DataLayer\obj\Debug\netcoreapp3.1\Poroject.DataLayer.genruntimeconfig.cache
+C:\Users\Siroos\Desktop\proje\Poroject.DataLayer\obj\Debug\netcoreapp3.1\Poroject.DataLayer.csprojAssemblyReference.cache

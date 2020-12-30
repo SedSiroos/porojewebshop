@@ -190,6 +190,7 @@ namespace Poroject.Core.Services
         public int AddEpisode(CourseEpisode episode, IFormFile EpisodeFile)
         {
             episode.CreateDate = DateTime.Now;
+
             episode.EpisodeFileName = EpisodeFile.FileName;
             string FilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/FileEpisode", episode.EpisodeFileName);
             using (var stream = new FileStream(FilePath, FileMode.Create))
@@ -238,12 +239,7 @@ namespace Poroject.Core.Services
             _context.SaveChanges();
         }
 
-        public void DeleteEpisoed(int episodeId)
-        {
-            CourseEpisode episode = GetEpisodById(episodeId);
-            episode.IsDelete = true;
-            _context.Update(episode);
-        }
+        
 
         public Tuple<List<ShowCourseListItemViewModel>,int> GetCourse(int pageId = 1, string filter = "", string getType = "all",
             string getOrderByType = "date",int startPrice=0,int endPrice=0 , List<int> selectedGroups = null, int take = 0)
@@ -256,7 +252,7 @@ namespace Poroject.Core.Services
 
             if (!string.IsNullOrEmpty(filter))
             {
-                result = result.Where(c => c.CourseTitle.Contains(filter));
+                result = result.Where(c => c.CourseTitle.Contains(filter)||c.Tage.Contains(filter));
             }
 
             switch (getType)
@@ -322,7 +318,7 @@ namespace Poroject.Core.Services
                 Price = c.CoursePrice,
                 Image = c.CourseImageName,
                 //TotalTime = new TimeSpan(c.CourseEpisodes.Sum(e => e.EpisodeTime.Ticks))
-            }).Count()/ take;
+            }).Count()/take;
 
             var query= result.Include(c=>c.CourseEpisodes).Select(c => new ShowCourseListItemViewModel()
             {
@@ -336,5 +332,12 @@ namespace Poroject.Core.Services
             return Tuple.Create(query, pageCount);
         }
 
+        public Course GetCourseForShow(int courseId)
+        {
+            return _context.courses.Include(c => c.CourseEpisodes)
+                .Include(c => c.CourseStatus).Include(c => c.CourseLevel)
+                .Include(c => c.User)
+                .FirstOrDefault(c => c.ID == courseId);
+        }
     }
 }

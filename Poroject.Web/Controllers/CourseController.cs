@@ -21,7 +21,18 @@ namespace Poroject.Web.Controllers
             ViewBag.SelectedGroups = selectedGroups;
             ViewBag.pageId = pageId;
             ViewBag.Groups = _courseService.GetAllGroup();
-            return View(_courseService.GetCourse(pageId, filter, getType, getOrderByType, startPrice, endPrice, selectedGroups, 1));
+            return View(_courseService.GetCourse(pageId, filter, getType, getOrderByType, startPrice, endPrice, selectedGroups, 9));
+        }
+
+        [Route("ShowCourse/{id}")]
+        public IActionResult ShowCourse(int id)
+        {
+            var course = _courseService.GetCourseForShow(id);
+            if (course==null)
+            {
+                return NotFound();
+            }
+            return View(course);
         }
     }
 }

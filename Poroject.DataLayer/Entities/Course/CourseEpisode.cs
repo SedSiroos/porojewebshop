@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Poroject.DataLayer.Entities.Course
@@ -33,6 +34,7 @@ namespace Poroject.DataLayer.Entities.Course
 
 
         #region Relation
+        [ForeignKey("ID")]
         public Course Course { get; set; }
         #endregion
     }
